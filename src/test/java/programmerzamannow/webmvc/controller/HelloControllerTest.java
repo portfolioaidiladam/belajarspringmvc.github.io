@@ -34,17 +34,17 @@ class HelloControllerTest {
     @Test
     void helloName() throws Exception {
         mockMvc.perform(
-                get("/hello").queryParam("name", "Eko")
+                get("/hello").queryParam("name", "Aidil")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("Hello Eko"))
+                content().string(Matchers.containsString("Hello Aidil"))
         );
     }
 
     @Test
     void helloPost() throws Exception {
         mockMvc.perform(
-                post("/hello").queryParam("name", "Eko")
+                post("/hello").queryParam("name", "Aidil")
         ).andExpectAll(
                 status().isMethodNotAllowed()
         );
