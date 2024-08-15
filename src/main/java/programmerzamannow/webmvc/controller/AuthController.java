@@ -18,11 +18,13 @@ public class AuthController {
     public ResponseEntity<String> login(
             @RequestParam(name = "username") String username,
             @RequestParam(name = "password") String password,
-            //cookie
+            //session
             HttpServletRequest servletRequest,
+            //cookie
             HttpServletResponse servletResponse
     ) {
         if ("eko".equals(username) && "rahasia".equals(password)) {
+            // sesion
             HttpSession session = servletRequest.getSession(true);
             session.setAttribute("user", new User(username));
             //cookie

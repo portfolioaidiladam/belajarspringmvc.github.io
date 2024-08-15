@@ -25,6 +25,7 @@ public class PersonController {
     public ResponseEntity<String> createPerson(@ModelAttribute @Valid CreatePersonRequest request,
                                BindingResult bindingResult){
 
+        // kita pengen liat fiedl yang error + message
         List<FieldError> errors = bindingResult.getFieldErrors();
         if(!errors.isEmpty()){
 
