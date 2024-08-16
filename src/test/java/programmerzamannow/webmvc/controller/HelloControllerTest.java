@@ -50,17 +50,18 @@ class HelloControllerTest {
         );
     }
 
-   /* @Test
+    @Test
     void helloView() throws Exception {
         mockMvc.perform(
+                // untuk error 405 cek get dan postnya
                 get("/web/hello").queryParam("name", "Eko")
         ).andExpectAll(
                 status().isOk(),
                 content().string(Matchers.containsString("Belajar View")),
                 content().string(Matchers.containsString("Hello Eko"))
         );
-    }*/
-
+    }
+    // belajar unit test redirect
     @Test
     void helloViewRedirect() throws Exception {
         mockMvc.perform(
